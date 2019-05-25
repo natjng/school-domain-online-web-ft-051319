@@ -13,9 +13,11 @@ class School
       @roster[grade] = []
       @roster[grade] << student_name
     end
+    
     # using the or equals operator
     # roster[grade] ||= []
     # roster[grade] << student_name
+    
   end
   
   def grade(grade)
