@@ -13,6 +13,11 @@ class School
       @roster[grade] = []
       @roster[grade] << student_name
     end
+    
+    # using the or equals operator
+    # roster[grade] ||= []
+    # roster[grade] << student_name
+    
   end
   
   def grade(grade)
@@ -20,9 +25,16 @@ class School
   end
   
   def sort
-    @roster.each do |grade, student_name|
-      student_name.sort!
+    # @roster.each do |grade, students|
+    #   students.sort!
+    # end
+    
+    sorted = {}
+    roster.each do |grade, students|
+      sorted[grade] = students.sort
     end
+    sorted
+  
   end
   
 end
